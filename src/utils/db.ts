@@ -53,7 +53,7 @@ class Bucket {
                 value = query(tr, [{ware: this.dbType, tab: this.bucketName, key: key}], timeout, false);
             });
         } catch(e) {
-            console.log("create memory bucket failed with error: ", e);
+            console.log("read key from bucket failed with error: ", e);
         }
 
         return value[0].value ? value[0].value : undefined;
